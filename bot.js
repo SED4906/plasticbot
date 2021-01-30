@@ -51,4 +51,4 @@ client.on('message', message => {
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 });
 
-client.login(config.token);
+client.login(token);
