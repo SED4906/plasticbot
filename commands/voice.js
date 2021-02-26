@@ -13,7 +13,7 @@ module.exports = {
 		sizedata = 0;
 		
 		for(c of s) {
-			if(c==' '){
+			if(c==' ' || c=='_'){
 				sarr.push(Buffer.from(Array.from({length:256}).fill(128)));
 				sizedata += 256;
 			}else if(c>='a' || c<='z'){
