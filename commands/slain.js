@@ -4,7 +4,7 @@ const fs = require('fs');
 
 module.exports = {
 	name: 'slain',
-	description: 'Terraria death messages.',
+	description: 'Perish.',
 	usage: '(mention)',
 	cooldown: 5,
 	execute(message, args) {

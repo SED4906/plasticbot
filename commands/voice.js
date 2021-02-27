@@ -3,7 +3,8 @@ const fs = require('fs');
 
 module.exports = {
 	name: 'voice',
-	description: 'A phonetic TTS',
+	aliases: 'tts',
+	description: 'A phonetic TTS. Use lowercase letters, dashes, and spaces only.',
 	usage: '[text]',
 	cooldown: 5,
 	execute(message, args) {
