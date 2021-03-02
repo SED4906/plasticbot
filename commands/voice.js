@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports = {
 	name: 'voice',
 	aliases: 'tts',
-	description: 'A phonetic TTS. Use lowercase letters, dashes, and spaces only.',
+	description: 'A phonetic TTS. Use letters, dashes, and spaces only. https://github.com/SED4906/plasticbot/blob/ok/TTS_README.txt',
 	usage: '[text]',
 	cooldown: 5,
 	execute(message, args) {
@@ -17,8 +17,8 @@ module.exports = {
 			if(c==' ' || c=='-'){
 				sarr.push(Buffer.from(Array.from({length:256}).fill(128)));
 				sizedata += 256;
-			}else if(c>='a' || c<='z'){
-				sdata = fs.readFileSync('./assets/tts/'+c+'.pcm');
+			}else if((c>='a' && c<='z') || (c>='A' && c<='Z')){
+				sdata = fs.readFileSync('./assets/tts/'+c.toLowerCase()+'.pcm');
 				switch(c) {
 					case 'w':
 					case 'x':
