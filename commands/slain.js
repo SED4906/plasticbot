@@ -14,7 +14,7 @@ module.exports = {
 		' was torn in half.', ' was decapitated.', ' let their arms get torn off.',
 		' watched their innards become outards.', ' was brutally dissected.', "'s extremities were detached.",
 		"'s body was mangled.", "'s vital organs were ruptured.", ' was turned into a pile of flesh.',
-		`was removed from ${message.guild.name}.`, ' got snapped in half.', ' was cut down the middle.',
+		` was removed from ${message.guild.name}.`, ' got snapped in half.', ' was cut down the middle.',
 		' was chopped up.', "'s plea for death was answered.", "'s meat was ripped off the bone.",
 		"'s flailing about was finally stopped.", ' had their head removed.', ' lost their head.',
 		' fell to their death.', " didn't bounce.", ' fell victim of gravity.',
