@@ -7,7 +7,7 @@ module.exports = {
 	usage: '[command]',
 	execute(message, args) {
 		if (message.author.id!=395268886515154945) return message.react("🔐");
-		if (!args.length) return message.channel.send("❓");
+		if (!args.length) return message.react("❓");
 		const commandName = args[0].toLowerCase();
 		const command = message.client.commands.get(commandName) || message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return message.react('⁉️');
