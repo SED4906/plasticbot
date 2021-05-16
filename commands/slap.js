@@ -10,6 +10,6 @@ module.exports = {
 		rng=Math.random();
 		if(rng <= 0.04) return message.channel.send(`Trout WHIFFA YU ${message.mentions.users.first().username}`);
 		else if(rng <= 0.08) return message.channel.send(`A Trout BROACHETH ${message.mentions.users.first().username}`);
-		else return message.channel.send(`<:trout:821745962610851850> ***WHACK!*** ${message.author.username} slaps ${message.mentions.users.first().username} around a bit with a wet trout.`);
+		else return message.channel.send(`<:trout:821745962610851850>***WHACK!*** ${message.author.username} slaps ${message.mentions.users.first().username} around a bit with a wet trout.`);
 	}
 };
