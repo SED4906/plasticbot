@@ -1,6 +1,32 @@
 const Discord = require('discord.js');
 const samjs = require('sam-js');
 
+function text2Uint8Array (text) {
+  const buffer = new Uint8Array(text.length);
+  text.split('').forEach((e, index) => {
+    buffer[index] = e.charCodeAt(0)
+  });
+  return buffer;
+}
+
+function Uint32ToUint8Array (uint32) {
+  const result = new Uint8Array(4);
+  result[0]  = uint32;
+  result[1]  = uint32 >>  8;
+  result[2]  = uint32 >> 16;
+  result[3]  = uint32 >> 24;
+
+  return result;
+}
+
+function Uint16ToUint8Array (uint16) {
+  const result = new Uint8Array(2);
+  result[0]  = uint16;
+  result[1]  = uint16 >> 8;
+
+  return result;
+}
+
 module.exports = {
 	name: 'voice',
 	aliases: ['tts','sam'],
