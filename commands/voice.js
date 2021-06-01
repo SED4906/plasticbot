@@ -11,7 +11,7 @@ module.exports = {
 		if (!args.length) return message.react('❓');
 		s = args.join(' ');
 		sam = new samjs();
-		const attachment = new Discord.MessageAttachment(sam.buf8(s), 'tts.wav');
+		const attachment = new Discord.MessageAttachment(Buffer(sam.buf8(s)), 'tts.wav');
 		return message.channel.send(attachment);
 	}
 };
