@@ -10,7 +10,7 @@ module.exports = {
 	execute(message, args) {
 		if (!args.length) return message.react('❓');
 		s = args.join(' ');
-		sam = new samjs.SamJs();
+		sam = new samjs();
 		const attachment = new Discord.MessageAttachment(sam.buf8(s), 'tts.wav');
 		return message.channel.send(attachment);
 	}
