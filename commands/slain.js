@@ -36,6 +36,6 @@ module.exports = {
 		deathmessage = `${uname}${rmesg}`
 		ctx.fillText(deathmessage,0,20);
 		const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'slain.png');
-		return message.channel.send("​",attachment);
+		return message.channel.send({files: [attachment]});
 	}
 };

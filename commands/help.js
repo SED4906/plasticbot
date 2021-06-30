@@ -31,6 +31,6 @@ module.exports = {
 		.addField('Usage',`${prefix}${command.name} ${command.usage}`)
 		.setFooter(`Aliases: ${aliaslist} | Cooldown: ${command.cooldown || 3} second(s)`);
 
-		message.channel.send("​",embed);
+		message.channel.send({embeds:[embed]});
 	}
 };

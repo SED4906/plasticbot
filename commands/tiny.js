@@ -22,6 +22,6 @@ module.exports = {
 		img.onerror = err => { throw err }
 		img.src = './assets/4x6.png';
 		const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'tiny.png');
-		return message.channel.send("​",attachment);
+		return message.channel.send({files: [attachment]});
 	}
 };
