@@ -3,7 +3,7 @@ const { token, prefix } = require('./config.json');
 const fs = require('fs');
 
 // Load command modules
-const client = new Discord.Client();
+const client = new Discord.Client({ ws: { intents: ['GUILDS', 'GUILD_MESSAGES'] } });
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
@@ -46,7 +46,7 @@ client.on('message', message => {
 		console.error(error);
 		return message.react('❗');
 	}
-	
+
 	timestamps.set(message.author.id, now);
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 });
