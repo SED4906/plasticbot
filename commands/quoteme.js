@@ -11,6 +11,6 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
                 .setDescription(args.join(' '))
                 .setFooter(`-${message.author.username}`, message.author.avatarURL());
-                message.channel.send(embed)
+                message.channel.send("​",embed)
 	}
 };

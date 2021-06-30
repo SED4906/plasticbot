@@ -81,6 +81,6 @@ module.exports = {
 		write(audiobuffer);
 
 		const attachment = new Discord.MessageAttachment(Buffer(realbuffer), 'tts.wav');
-		return message.channel.send(attachment);
+		return message.channel.send("​",attachment);
 	}
 };
